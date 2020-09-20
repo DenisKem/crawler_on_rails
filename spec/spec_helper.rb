@@ -15,6 +15,7 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require File.expand_path("../config/environment", __dir__)
+require 'webmock/rspec'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -101,5 +102,4 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 
-  Dir[Rails.root.join('app/services', '**', '*.rb')].each {|f| require f}
 end
