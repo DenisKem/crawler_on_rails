@@ -3,6 +3,7 @@
 cd /app
 rm tmp/pids/server.pid
 bundle config set path /gems
+echo "bundle config set path /gems" >> /root/.bashrc
 bundle install
 yarn install --check-files
 bundle exec rails db:migrate
