@@ -8,3 +8,11 @@ services:
     ports:
       - 3000:3000
     command: ["bash", "/app/startup.sh"]
+  demo:
+    image: ruby:2.7.1
+    volumes:
+      - ./demo:/app
+      - ./gems:/gems
+    ports:
+      - 3001:4567
+    command: ["bash", "/app/startup.sh"]    
