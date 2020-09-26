@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 
   def crawl
     urls = InputParser.new.call(file)
+    @result = Crawler.new.call(urls)
   end
 
   private
