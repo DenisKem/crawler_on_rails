@@ -1,4 +1,4 @@
-<%= form_with(url: "/crawl", method: "post", multipart: true, data: { 'data-turbolinks': false }) do %>
+<%= form_with(url: "/crawl", method: "post", multipart: true, data: {remote: false}) do %>
   <%= label_tag 'file' %>
   <%= file_field_tag 'file' %>
   <br>
