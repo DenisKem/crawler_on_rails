@@ -2,27 +2,9 @@ version: '3.4'
 services:
   web:
     build: .
-    links:
-      - db
-    environment:
-      - PG_HOST=db
-      - PG_USER=user
-      - PG_DB=crawler
-      - PG_PASSWORD=password
-      - RAILS_ENV=development  
     volumes:
       - ./:/app
       - ./gems:/gems
     ports:
       - 3000:3000
     command: ["bash", "/app/startup.sh"]
-  db:
-    image: postgres:12.4
-    environment:
-      - POSTGRES_USER=user
-      - POSTGRES_DB=crawler
-      - POSTGRES_PASSWORD=password
-    volumes:
-      - pg_data:/var/lib/postgresql/data
-volumes:
-  pg_data: 

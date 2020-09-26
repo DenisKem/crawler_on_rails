@@ -36,3 +36,4 @@ gems/
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+db/*.sqlite3
