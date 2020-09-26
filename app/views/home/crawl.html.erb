@@ -1,11 +1,31 @@
-<% @result.each_with_index do |item, i| %>
-<div id="results-<%= i %>">
-  <div class="url-value">
-    <%= item[:url] %>
-  </div>
+<table>
+  <thead>
+    <tr>
+      <th>
+        URL
+      </th>
 
-  <div class="title-value">
-    <%= item[:title] %>
-  </div>
+      <th>
+        Title
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @result.each_with_index do |item, i| %>
+      <tr id="results-<%= i %>">
+        <td class="url-value">
+          <%= item[:url] %>
+        </td>
+
+        <td class="title-value">
+          <%= item[:title] %>
+        </td>
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+
+<div>
+  <%= link_to 'Back', root_url %>
 </div>
-<% end %>
