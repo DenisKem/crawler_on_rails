@@ -1,3 +1,7 @@
+<div>
+  Time spent: <b><%= @service.time_spent %></b>
+</div>
+
 <table>
   <thead>
     <tr>
@@ -12,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @result.each_with_index do |item, i| %>
+    <% @service.result.each_with_index do |item, i| %>
       <tr id="results-<%= i %>">
         <td class="url-value">
           <%= item[:url] %>

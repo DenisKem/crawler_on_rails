@@ -4,13 +4,6 @@ class HomeController < ApplicationController
   end
 
   def crawl
-    urls = InputParser.new.call(file)
-    @result = Crawler.new.call(urls)
-  end
-
-  private
-
-  def file
-    params.permit(:file)[:file]
+    @service = Forms::CrawlForm.new(params.permit!).tap(&:call)
   end
 end

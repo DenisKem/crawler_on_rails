@@ -5,5 +5,6 @@ configure do
 end
 
 get '/' do
+  sleep params['wait'].to_i
   erb :index
 end

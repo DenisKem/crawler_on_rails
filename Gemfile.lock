@@ -187,6 +187,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    tainbox (2.1.2)
+      activesupport
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -235,6 +237,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  tainbox
   web-console (>= 3.3.0)
   webdrivers
   webmock
