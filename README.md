@@ -10,7 +10,7 @@ Simple parallel crawler. Takes urls as input and display their `title` tags.
 
 # In action
 
-- Open in browser [http://localhost:3000]
+- Open in browser (http://localhost:3000)
 - Upload test file (it's demo_links.txt, you can find it in this repo)
 - This file contains demo links to demo container (see `docker-compose.yml`)
 - Set `threads_count` option to `1`
