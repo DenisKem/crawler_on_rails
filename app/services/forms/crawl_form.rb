@@ -3,6 +3,7 @@ module Forms
     include Tainbox
     
     attribute :file
+    attribute :threads_count
 
     attr_reader :result
     attr_reader :time_spent
@@ -16,7 +17,7 @@ module Forms
     private
 
     def crawl
-      Crawler.new.call(urls)
+      Crawler.new(threads_count: threads_count).call(urls)
     end
 
     def urls

@@ -7,10 +7,16 @@
 
 <div class="row">
   <%= form_with(url: "/crawl", method: "post", multipart: true, data: {remote: false}) do %>
-    <%= label_tag 'file' %>
-    <%= file_field_tag 'file' %>
-    <br>
-    <br>
+    <div class="form-group">
+      <%= label_tag 'threads_count' %>
+      <%= number_field_tag 'threads_count', 1, step: 1, max: 5, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag 'file' %>
+      <%= file_field_tag 'file', class: "form-control-file" %>
+    </div>
+    
     <%= submit_tag("Crawl", class: 'btn btn-success') %>
   <% end %>
 </div>
