@@ -1,35 +1,49 @@
-<div>
-  Time spent: <b><%= @service.time_spent %></b>
+<br>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="row">
+      <table class="table table-bordered">
+        <tr>
+          <th>Time spent:</th>
+          <td><%= @service.time_spent %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        URL
-      </th>
+<br>
 
-      <th>
-        Title
-      </th>
-    </tr>
-  </thead>
+<div class="row">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          URL
+        </th>
 
-  <tbody>
-    <% @service.result.each_with_index do |item, i| %>
-      <tr id="results-<%= i %>">
-        <td class="url-value">
-          <%= item[:url] %>
-        </td>
-
-        <td class="title-value">
-          <%= item[:title] %>
-        </td>
+        <th>
+          Title
+        </th>
       </tr>
-      <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<div>
-  <%= link_to 'Back', root_url %>
+    <tbody>
+      <% @service.result.each_with_index do |item, i| %>
+        <tr id="results-<%= i %>">
+          <td class="url-value">
+            <%= item[:url] %>
+          </td>
+
+          <td class="title-value">
+            <%= item[:title] %>
+          </td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="row">
+  <%= link_to 'Back', root_url, class: "btn btn-info" %>
 </div>

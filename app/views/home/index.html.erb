@@ -1,6 +1,16 @@
-<%= form_with(url: "/crawl", method: "post", multipart: true, data: {remote: false}) do %>
-  <%= label_tag 'file' %>
-  <%= file_field_tag 'file' %>
-  <br>
-  <%= submit_tag("Crawl") %>
-<% end %>
+<br>
+
+<div class="row">
+  <h2>Input file:</h2>
+</div>
+<br>
+
+<div class="row">
+  <%= form_with(url: "/crawl", method: "post", multipart: true, data: {remote: false}) do %>
+    <%= label_tag 'file' %>
+    <%= file_field_tag 'file' %>
+    <br>
+    <br>
+    <%= submit_tag("Crawl", class: 'btn btn-success') %>
+  <% end %>
+</div>
